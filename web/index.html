@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="webapp">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>webapp</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel='stylesheet' href='http://codemirror.net/lib/codemirror.css'>
+	<link rel='stylesheet' href='http://codemirror.net/doc/docs.css'>
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src='http://codemirror.net/lib/codemirror.js'></script>
+  <script src='http://codemirror.net/mode/xml/xml.js'></script>
+  <script src='http://codemirror.net/mode/javascript/javascript.js'></script>
+  <script src='http://codemirror.net/mode/css/css.js'></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script> -->
+  <script type="text/javascript" src="http://npmcdn.com/parse@1.9.2/dist/parse.min.js"></script>
+  <script src='http://codemirror.net/mode/htmlmixed/htmlmixed.js'></script>
+  <script src='http://codemirror.net/addon/display/fullscreen.js'></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDr6hBzeFTEeJC9bOX5IbflN_Cfjm3U6F8",
+      authDomain: "user-authentication-704ad.firebaseapp.com",
+      databaseURL: "https://user-authentication-704ad.firebaseio.com",
+      projectId: "user-authentication-704ad",
+      storageBucket: "user-authentication-704ad.appspot.com",
+      messagingSenderId: "503942336360",
+      appId: "1:503942336360:web:e18e7191fc1f57348510dd",
+      measurementId: "G-02186R09D2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript" row="50" column="150"></script>
+  <from>
+    <textarea id="xml" rows="50" cols="150">
+      <breakfast_menu>
+        <food>
+        <name>Belgian Waffles</name>
+        <price>$5.95</price>
+        <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+        <calories>650</calories>
+        </food>
+        <food>
+        <name>Strawberry Belgian Waffles</name>
+        <price>$7.95</price>
+        <description>Light Belgian waffles covered with strawberries and whipped cream</description>
+        <calories>900</calories>
+        </food>
+        <food>
+        <name>Berry-Berry Belgian Waffles</name>
+        <price>$8.95</price>
+        <description>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</description>
+        <calories>900</calories>
+        </food>
+        <food>
+        <name>French Toast</name>
+        <price>$4.50</price>
+        <description>Thick slices made from our homemade sourdough bread</description>
+        <calories>600</calories>
+        </food>
+        <food>
+        <name>Homestyle Breakfast</name>
+        <price>$6.95</price>
+        <description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
+        <calories>950</calories>
+        </food>
+      </breakfast_menu>
+    </textarea>
+  </from>
+</body>
+</html>
